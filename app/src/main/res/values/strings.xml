@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Our News</string>
+    <string name="api_error_repos">Error loading Articles</string>
 </resources>
