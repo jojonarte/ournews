@@ -2,7 +2,8 @@
 <resources>
     <dimen name="list_item_bottom_margin">16dp</dimen>
     <dimen name="list_item_elevation">16dp</dimen>
-    <dimen name="list_item_vertical_padding">16dp</dimen>
-    <dimen name="list_item_horizontal_padding">16dp</dimen>
-    <dimen name="content_top_padding">16dp</dimen>
+    <dimen name="list_item_vertical_padding">8dp</dimen>
+    <dimen name="list_item_horizontal_padding">8dp</dimen>
+    <dimen name="content_top_padding">8dp</dimen>
+    <dimen name="cardview_horizontal_margin">8dp</dimen>
 </resources>

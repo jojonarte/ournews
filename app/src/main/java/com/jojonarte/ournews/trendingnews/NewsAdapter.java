@@ -6,8 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.jojonarte.ournews.R;
 import com.jojonarte.ournews.model.Article;
 
@@ -65,6 +67,7 @@ public class NewsAdapter  extends RecyclerView.Adapter<NewsAdapter.NewsViewHolde
 
         @BindView(R.id.tv_news_title) TextView newsTitleText;
         @BindView(R.id.tv_news_description) TextView newsDescriptionText;
+        @BindView(R.id.iv_news_headline) ImageView newsHeadlineImageView;
 
         private Article article;
 
@@ -82,6 +85,9 @@ public class NewsAdapter  extends RecyclerView.Adapter<NewsAdapter.NewsViewHolde
             this.article = article;
             newsTitleText.setText(article.title());
             newsDescriptionText.setText(article.description());
+            Glide.with(newsHeadlineImageView.getContext())
+                    .load(article.urlToImage())
+                    .into(newsHeadlineImageView);
         }
     }
 
