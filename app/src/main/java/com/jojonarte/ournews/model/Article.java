@@ -18,10 +18,12 @@ public abstract class Article {
 
     public abstract String title();
 
+    @Nullable
     public abstract String description();
 
     public abstract String url();
 
+    @Nullable
     public abstract String urlToImage();
 
     public abstract ZonedDateTime publishedAt();

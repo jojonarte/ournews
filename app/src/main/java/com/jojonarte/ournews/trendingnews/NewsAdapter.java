@@ -84,10 +84,14 @@ public class NewsAdapter  extends RecyclerView.Adapter<NewsAdapter.NewsViewHolde
         void bind(Article article) {
             this.article = article;
             newsTitleText.setText(article.title());
-            newsDescriptionText.setText(article.description());
-            Glide.with(newsHeadlineImageView.getContext())
-                    .load(article.urlToImage())
-                    .into(newsHeadlineImageView);
+            newsDescriptionText.setVisibility(View.GONE);
+//            newsDescriptionText.setText(article.description());
+            String url = article.urlToImage();
+            if (url != null) {
+                Glide.with(newsHeadlineImageView.getContext())
+                        .load(url)
+                        .into(newsHeadlineImageView);
+            }
         }
     }
 
